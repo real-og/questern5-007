@@ -41,25 +41,32 @@ async def send_welcome(message: types.Message, state: FSMContext):
     ar = data.get('task_5_ans')
     if input == 'ГЕРМАНИЯ':
         ar[0] = '1'
-        await message.answer('Верно, продолжайте')
+        if ar != ['1', '1', '1', '1', '1', '1', '1']:
+            await message.answer('Верно ☑️ Продолжайте!')
     elif input == 'ИСПАНИЯ':
         ar[1] = '1'
-        await message.answer('Верно, продолжайте')
+        if ar != ['1', '1', '1', '1', '1', '1', '1']:
+            await message.answer('Верно ☑️ Продолжайте!')
     elif input == 'ИТАЛИЯ':
         ar[2] = '1'
-        await message.answer('Верно, продолжайте')
+        if ar != ['1', '1', '1', '1', '1', '1', '1']:
+            await message.answer('Верно ☑️ Продолжайте!')
     elif input == 'ПОРТУГАЛИЯ':
         ar[3] = '1'
-        await message.answer('Верно, продолжайте')
+        if ar != ['1', '1', '1', '1', '1', '1', '1']:
+            await message.answer('Верно ☑️ Продолжайте!')
     elif input == 'КИТАЙ':
         ar[4] = '1'
-        await message.answer('Верно, продолжайте')
+        if ar != ['1', '1', '1', '1', '1', '1', '1']:
+            await message.answer('Верно ☑️ Продолжайте!')
     elif input == 'ЧИЛИ':
         ar[5] = '1'
-        await message.answer('Верно, продолжайте')
+        if ar != ['1', '1', '1', '1', '1', '1', '1']:
+            await message.answer('Верно ☑️ Продолжайте!')
     elif input == 'СУДАН':
         ar[6] = '1'
-        await message.answer('Верно, продолжайте')
+        if ar != ['1', '1', '1', '1', '1', '1', '1']:
+            await message.answer('Верно ☑️ Продолжайте!')
     else:
         await message.answer('Неверно')
 
@@ -83,6 +90,8 @@ async def send_welcome(message: types.Message, state: FSMContext):
         await message.answer(texts.mission_completed, reply_markup=kb.mission6_kb)
         await State.ended_task_5.set()
     elif input == texts.get_hint:
-        await message.answer(texts.task_5_1_hint, reply_markup=kb.hint_kb)
+        await message.answer(texts.task_5_1_hint, reply_markup=kb.hint_double_kb)
+    elif input == texts.get_more_hint:
+        await message.answer(texts.task_5_2_hint, reply_markup=kb.hint_kb)
     else:
         await message.answer(texts.wrong_answer, reply_markup=kb.hint_kb)

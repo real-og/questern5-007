@@ -40,25 +40,25 @@ async def send_welcome(message: types.Message, state: FSMContext):
     ar = data.get('task_4_ans')
     if input == '10':
         ar[0] = '1'
-        await message.answer('Н')
+        await message.answer('Верно! Вы получаете букву <b>H</b>.')
     elif input == '343':
         await message.answer('Да, это номер указан на танке. Напишите сумму этих 3 чисел.')
     elif input == 'CARLSON':
         ar[1] = '1'
-        await message.answer('А')
+        await message.answer('Верно! Вы получаете букву <b>А</b>.')
     elif input in ['CARLSSON', 'KARLSSON', 'KARLSON',]:
         await message.answer('Проверьте правильность написания этого слова.')
     elif input in ['PARIS', 'ПАРИЖ']:
         ar[2] = '1'
-        await message.answer('Л')
+        await message.answer('Верно! Вы получаете букву <b>Л</b>.')
     elif input == 'VB':
-        await message.answer('C')
+        await message.answer('Верно! Вы получаете букву <b>С</b>.')
         ar[3] = '1'
     elif input in ['ЖЕЛТЫЙ', 'ЖЕЛТОГО', 'ЖЕЛТЫЙ ЦВЕТ', 'ЖЕЛТОГО ЦВЕТА', 'ЖЁЛТЫЙ', 'ЖЁЛТОГО', 'ЖЁЛТЫЙ ЦВЕТ', 'ЖЁЛТОГО ЦВЕТА', ]:
-        await message.answer('У')
+        await message.answer('Верно! Вы получаете букву <b>У</b>.')
         ar[4] = '1'
     elif input == 'ВЕЛИКОБРИТАНИЯ':
-        await message.answer('Р')
+        await message.answer('Верно! Вы получаете букву <b>Р</b>.')
         ar[5] = '1'
     elif input == 'АНГЛИЯ':
         await message.answer('Англия входит в состав этого государства. Как называется это государство?')

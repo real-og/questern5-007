@@ -43,6 +43,12 @@ async def send_welcome(message: types.Message, state: FSMContext):
         await State.ended_task_3.set()
     elif input.upper() in texts.task_3_2_ans_wrong:
         await message.answer(texts.task_3_1_correction)
+    elif input.upper() in ['3,2,4', '2,3,4', '2,4,3', '3,4,2', '4,3,2', '4,2,3',
+                           '324', '234', '243', '342', '432', '423',
+                           '3, 2, 4', '2, 3, 4', '2, 4, 3', '3, 4, 2', '4, 3, 2', '4, 2, 3',
+                           '3 2 4', '2 3 4', '2 4 3', '3 4 2', '4 3 2', '4 2 3',
+                           ]:
+        await message.answer(texts.task_3_1_correction_2)
     else:
         await message.answer(texts.wrong_answer)
 
