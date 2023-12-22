@@ -15,7 +15,7 @@ MAIN_CODE = '243516'
 # MAIN_CODE = '243514'
 
 
-storage = RedisStorage2(db=7)
+storage = RedisStorage2(db=15)
 # storage = MemoryStorage()
 
 bot = Bot(token=BOT_TOKEN, parse_mode="HTML")
