@@ -26,6 +26,10 @@ async def send_welcome(message: types.Message, state: FSMContext):
     if input.upper() in texts.task_2_1_ans:
         await message.answer(texts.right_answer)
         await message.answer(texts.task_2_2, reply_markup=kb.hint_kb)
+        with open('images/task2.jpg', 'rb') as photo:
+            await message.answer_photo(photo)
+        with open('images/qrcode.jpg', 'rb') as photo:
+            await message.answer_photo(photo)
         await State.task_2_2.set()
     else:
         await message.answer(texts.wrong_answer)
