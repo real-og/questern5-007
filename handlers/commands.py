@@ -19,7 +19,7 @@ async def send_welcome(message: types.Message, state: FSMContext):
 
 
             await State.entering_name.set()
-            await State.ended_task_6.set()
+            # await State.ended_task_6.set()
 
 
             await state.update_data(team_number=CODES.index(code) + 1)
